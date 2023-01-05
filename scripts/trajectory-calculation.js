@@ -27,8 +27,8 @@ function calculateTrajectory(trajectoryNum) {
     Расчет параметров траектории
 **/
 function getTrajectoryParams(trajectoryNum) {
-    const epsilon = Number(document.getElementById(`e-${trajectoryNum}`).value) || getSetting('CALCULATION.epsilonDefault');
-    const p = getSetting(`CALCULATION.p${trajectoryNum}`);
+    const epsilon = Number(document.getElementById(`e-${trajectoryNum}`).value) || getSetting(`CALCULATION.epsilon.${trajectoryNum}`);
+    const p = getSetting(`CALCULATION.p.${trajectoryNum}`);
 
     return { p, epsilon };
 }
@@ -50,7 +50,7 @@ function sqrt(num) {
 **/
 function setDefaults() {
     for(let inputNum = 0; inputNum < getSetting('UI.inputNum'); inputNum++) {
-        document.getElementById(`e-${inputNum}`).value = getSetting('CALCULATION.epsilonDefault') + inputNum * 0.05;
+        document.getElementById(`e-${inputNum}`).value = getSetting(`CALCULATION.epsilon.${inputNum}`);
     }
 }
 

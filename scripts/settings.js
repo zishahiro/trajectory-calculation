@@ -19,7 +19,7 @@ const SETTINGS = {
 
     UI: {
         autoUpdate: true,
-        inputNum: 3,
+        inputNum: 8,
         colors: ['red', 'green', 'blue', 'violet', 'orange', 'brown', 'tomato', 'slategrey', 'lime', 'mediumturquoise'],
         inputMetadata: [
             {
@@ -34,10 +34,27 @@ const SETTINGS = {
         angleIncrement: 0.05,
         scale: 0.000000002,
         scaleIncrement: 1.5,
-        epsilonDefault: 0.017,
-        p0: 130312028083,
-        p1: 173894348787,
-        p2: 98245645645,
+        epsilon: [
+            0.205631,
+            0.006773,
+            0.01671,
+            0.093412,
+            0.048393,
+            0.054151,
+            0.047168,
+            0.08586,
+        ],
+        p: [
+            98245645645,
+            130312028083,
+            173894348787,
+            200312028083,
+            223894348787,
+            254245645645,
+            270312028083,
+            303894348787,
+            333245645645,
+        ],
     }
 }
 
